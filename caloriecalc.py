@@ -18,6 +18,16 @@ def menu():
         "Milkshake": 690
     }
 
+    #css to hide label of number input
+    hide_streamlit_style = """
+            <style>
+                .stNumberInput > label {
+                    display: none;
+                }
+            </style>
+            """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
     total_calories = 0
 
     st.write("Select the items and quantity:")
